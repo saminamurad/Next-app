@@ -18,10 +18,123 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+/* styles.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+form {
+  border-radius: 8px; 
+  background-color: #f0f0f0; 
+  width:80%;
+  
+}
+
+
+input[type="text"] {
+  background-color: #f0f0f0;
+ 
+
+}
+
+button[type="submit"] {
+ 
+  background-color: #eee;
+  color: white;
+  
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  
+}
+.hum-icon{
+  color:#333333ba;
+    /* height: 1rem; */
+    font-size: 21px;
+    margin: 10px;
+}
+span{
+  color: #333333ba;
+  font-weight:500 !important;
+
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon {
+  margin-right: 10px;
+}
+
+.logo {
+  
+  margin-right: 10px;
+}
+
+.keep-text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+   margin-left: 10px;
+   color: #333333ba;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+
+.right-section > div {
+  margin-left: 20px; 
+}
+.right-section > div:first-child {
+  margin-left: 20;
+}
+.right-section > div svg {
+  font-size: 20px;
+}
+
+.card {
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+
+  background-color: #fff;
+  padding: 20px; 
+}
+
+.centered-card {
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+    max-width: 400px;
+  width: 100%;
 }
