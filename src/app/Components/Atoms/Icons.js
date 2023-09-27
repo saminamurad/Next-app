@@ -4,10 +4,10 @@ function Icons() {
   return (
     <div className='logo'>
      
-      <img
+      <image
         src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
-        width="50"
-        height="50"
+        width={50}
+        height={50}
         alt="Your Logo"
         className="logo"
       />
