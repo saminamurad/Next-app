@@ -7,6 +7,7 @@ import Image from "../img/Image.svg";
 import more from "../img/more.svg";
 import undo from "../img/undo.svg";
 import redo from "../img/redo.svg";
+import check_box from "../img/check_box.svg";
 
 export default function CardIconList({ viewonly }) {
   return (
@@ -16,6 +17,8 @@ export default function CardIconList({ viewonly }) {
       <CardsIcons icon={paint} />
       <CardsIcons icon={Image} />
       <CardsIcons icon={more} />
+      <CardsIcons icon={check_box} />
+
       {!viewonly && <CardsIcons icon={undo} />}
       {!viewonly && <CardsIcons icon={redo} />}
     </div>

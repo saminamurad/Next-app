@@ -1,14 +1,15 @@
 "use client";
 import React, { useState } from "react";
 import CardIconList from "./CardIconList";
+import delete_button from "../img/delete_button.svg";
 
-export default function Card({ viewonly, onSave, savedData }) {
+export default function Card({ viewonly, onSave, savedData, onDelete, id }) {
   const [title, setTitle] = useState(savedData ? savedData.title : "");
   const [taskDescription, setTaskDescription] = useState(
     savedData ? savedData.description : ""
   );
 
-  const handleSave = () => {
+  const handleSave = (e) => {
     onSave({
       title: title,
       description: taskDescription
@@ -26,23 +27,28 @@ export default function Card({ viewonly, onSave, savedData }) {
           <input
             className="card-input"
             disabled={viewonly}
-            placeholder="Title"
+            placeholder="title"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
           <textarea
-            disabled={viewonly}
             className="card-textarea"
-            placeholder="take a note..."
+            placeholder="Take a note..."
             value={taskDescription}
             onChange={(e) => setTaskDescription(e.target.value)}
           />
         </div>
         <div className="card-footer">
           <CardIconList viewonly={viewonly} />
+
+          {viewonly && (
+            <button className="Del-Button" onClick={() => onDelete(id)}>
+              Delete
+            </button>
+          )}
           {!viewonly && (
             <button className="card-button" onClick={handleSave}>
-              close
+              save
             </button>
           )}
         </div>
